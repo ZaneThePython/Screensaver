@@ -1,0 +1,26 @@
+{
+  "name": "@be/screensaver",
+  "version": "1.1.0",
+  "description": "Ambient screensaver: photos with a clock that moves between corners, or a self-playing Pac-Man game. Can start by itself when Jibo is idle.",
+  "main": "index.js",
+  "config": {
+    "standalone": true
+  },
+  "jibo": {
+    "main": "index.html",
+    "type": "asset-pack",
+    "display-name": "screensaver",
+    "prompt": "Screensaver",
+    "background": "background.js"
+  },
+  "engines": {
+    "node": ">=6.0"
+  },
+  "syncDependencies": [
+    "jibo",
+    "@be/be-framework"
+  ],
+  "scripts": {
+    "test": "node tests/saver.test.js && node tests/skill.test.js && node tests/pacman.test.js"
+  }
+}
